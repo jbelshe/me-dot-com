@@ -19,8 +19,9 @@ export default function AboutPage() {
 
   const handleVersionSelect = (section: SectionType, version: Version) => {
     setSelectedVersions(prev => ({
-      ...prev,
-      [section]: prev[section] === version ? null : version
+      ...prev,  // load the previous state into prev
+      // evaluate the section dict{} to get it's value (background/career/personal) to use as a key
+      [section]: prev[section] === version ? null : version // if the version was already selected, clear it
     }));
   };
 
@@ -67,8 +68,10 @@ export default function AboutPage() {
       </div>
 
       {/* Combined Content Display */}
+      {/* iterate through all the sections to see if any are selected 
+      if any are none selected, the "&&" will not render the div  (sections are null by default)*/} 
       {Object.values(selectedVersions).some(version => version !== null) && (
-        <div className="bg-gray-50 p-8 rounded-lg border">
+        <div className="bg-gray-50 p-8 rounded-lg border"> 
           <h2 className="text-2xl font-semibold mb-6 text-gray-800 border-b pb-2">
             Your Custom Bio
           </h2>
@@ -84,7 +87,7 @@ export default function AboutPage() {
                   </h3>
                   <div className="pl-4 border-l-2 border-gray-200">
                     {typeof content === 'string' ? (
-                      <p>{content}</p>
+                      <p className="whitespace-pre-line">{content}</p>
                     ) : (
                       <div>{content}</div>
                     )}
