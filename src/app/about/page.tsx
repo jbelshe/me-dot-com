@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { versions } from './content';
 import type { Version, SectionType } from './types';
 import EmailContact from '@/components/EmailContact';
@@ -29,11 +30,15 @@ export default function AboutPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="flex justify-center mb-6">
-        <img
-          src="/images/about/prof_front1.jpg"
-          alt="Profile"
-          className="h-80 w-80 rounded-full object-cover border-2 border-black"
-        />
+        <div className="relative h-80 w-80 rounded-full overflow-hidden border-2 border-black">
+          <Image
+            src="/images/about/prof_front1.jpg"
+            alt="Profile"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
 
       <h1 className="text-4xl font-bold mb-8 text-center">About Me</h1>
@@ -81,9 +86,6 @@ export default function AboutPage() {
       if any are none selected, the "&&" will not render the div  (sections are null by default)*/} 
       {Object.values(selectedVersions).some(version => version !== null) && (
         <div className="bg-gray-50 p-8 rounded-lg border"> 
-          <h2 className="text-2xl font-semibold mb-6 text-gray-800 border-b pb-2">
-            Your Custom Bio
-          </h2>
           <div className="space-y-6 text-gray-700 leading-relaxed">
             {(Object.keys(selectedVersions) as SectionType[]).map((section) => {
               const selectedVersion = selectedVersions[section];
@@ -109,8 +111,8 @@ export default function AboutPage() {
       )}
       
       <div className="mt-12 pt-8 border-t border-gray-200">
-        <h2 className="text-2xl font-semibold mb-2">Don't Be A Stranger</h2>
-        <p className="mb-2">If you want to hear more, don't be afraid to reach out:</p>
+        <h2 className="text-2xl font-semibold mb-2">Don&apos;t Be A Stranger</h2>
+        <p className="mb-2">If you want to hear more, don&apos;t be afraid to reach out:</p>
         <EmailContact/>
       </div>
     </div>

@@ -42,8 +42,30 @@ export const versions: Record<string, Section> = {
   },
   personal: {
     shortest: `World travel/real-life hiatus, Giants baseball, NYT’s Games, bass guitar, learning languages, baking, music, writing.`,
-    shorter: ``,
-    longer: ``,
-    longest: ``  
+    shorter: `I don’t think there’s a good way to do a personal section with a level of detail between Shortest/Longer.
+              \n\nMy grandmother thinks I’m a delight.`,
+    longer: `Writing this section feels like I’m filling out an eHarmony profile.
+              \n\nHi 👋 My name is Jack!
+              \n\nIn the mornings, I enjoy caffeinating ☕️and doing the NYT Mini, Wordle, and Connections (in that order).  
+              \n\nIn the evening I fulfill my civic male duty and watch my hometown sports teams 🧢⚾️🏟️🏈🏀 (Giants baseball, Niners football, and Warriors basketball).  
+              \n\nI also like cooking 👨‍🍳🌮🍽️ dinner with friends (and he cooks, he’s the whole package!).  And by cooking with friends, I mean, I cook and they just watch.
+              \n\nBack when I lived in a house with a yard I got into woodwork 🪚🧰🪵🔨 for a bit.  (wow! he’s so capable! and rugged!)  
+              \n\nI spent the first 7 months of the year doing some solo backpacking hitting 20 countries and 5 continents.  ✈️🌏⛰️🏝️
+              \n\nI know how to program and sometimes do that for fun.  🤓💻
+              \n\nI like trying to learn languages I’ll never be fluent in.  
+              \n\nAt one point on my trip I was doing flashcards for 5 different languages.  I’ve got that number down to 2.5 now. 
+              \n\nI love music, and listen to mostly indie and rock (he’s not like the other boys!).  I also play a handful of instruments fairly poorly (it’s the effort that counts).    🎸🥁🎹`,
+    longest: `If you’ve read all the other Longest sections and you’re still willing to read another to get to me better, thanks for the interest.  If you want to save some time and not read this, reach out directly!
+              \n\nAnyways. Here are some not work/school related things about me.
+              \n\nAfter finishing my graduate program this past December, I fled the country.  I then spent the first 7 months of the 2025 backpacking around the world, eating street food, talking to strangers and sleeping in hostels across 20 countries and 5 continents.  
+              \n\nOne of the coolest things I’ve done in my life.  I’d say this trip was more valuable to my education than all the GE courses I had to take during college.  I’d talk about it more, but I’ve already written about it. 
+              \n\nI’m a big Bay Area sports fan (Giants/Warriors/49ers).  I stand by my take that sports is the equivalent of reality for TV for guys.  It’s my favorite no-thinking activity and it’s a great way to force my friends to hang out.
+              \n\nI have a caffeine addiction (it’s good for us right??) that is the highlight of my morning.  My morning routine normally involves coffee, then do New York Times games (Mini => Wordle => Connections).  I’ve lost a step over the years, but I will brag for an eternity about the time I broke 10 seconds in the mini.
+              \n\nI also have an obsession with trying to learn languages.  At one point traveling this year, I was doing flashcards for 5 different languages.  I admit this was too much and I’ve scaled it back to 3.   I don’t think I’ll ever be fluent, but I’ve learned enough Italian to make my hostel roommates from Milan laugh, enough German to order at a Biergarten, and enough Japanese to identify the sign for toilet.  I even built a piece of software to help me out with it.  
+              \n\nMusic is a huge part of my life.  My dad doesn’t understand how I can focus, but I almost always have my headphones in while I do work.  My spotify reported that I listened to over 80k minutes of music last year (yes, I’m bragging online about this, I’m proud).  
+              \n\nMy inner engineering urge understand how everything works lead me to try out guitar.  Similar to my experience with language, my ambition has tendencies to exceed the bounds of reality.  At one point I was trying to learn 4 different instruments.  I’ve also scaled it down to just bass guitar, and normal guitar, but I have a bookmark down to learn piano later in life.
+              \n\nWhen I have free time I also like cooking with friends.  A lot of the time this involves me baking and my friends eating the sweets I make, but that’s fine by me.  We have a bit of a quid pro quo, where I have a sweet tooth but don’t want to eat a whole batch of cookies, so I trade baked goods for absolvement of entire cookie tray of guilt.
+              \n\nOut of college, I lived in a house with a backyard.  I also lacked furniture in my room.  Combine the engineering brain with a surplus of new found free time now that I only working full-time now and not in engineering school anymore, lead to me build my own furniture.  You can check it out here.  I’ve built a bookshelf, an insanely heavy picnic bench, a couch table,  a spice rack, and a piano stool and have done a lot of Home Depot trips.  I also built a shoe rack out of old Ikea shelves that I found on the street.
+              \n\nMy nerd activities on the side include programming connected devices (think arduinos).  Before my trip, I set up a VPN at my home with a raspberry pi (that I never used).  I’ve built alarm clocks with infrared sensors, and paper towel dispensers with radar sensors.  Sometimes I dabble in lighting fixtures. Computers are pretty cool.`,
   }
 };
