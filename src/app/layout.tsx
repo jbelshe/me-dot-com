@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,32 +30,39 @@ export default function RootLayout({
       >
         {/* Global Navbar */}
         <header className="w-full border-b bg-white shadow-sm">
-        <nav className="mx-auto flex max-w-5xl items-center justify-between p-4">
-            <a href="/" className="text-3xl font-semibold">
-              Jack Belshé
-            </a>
-            <div className="space-x-8">
-              <a href="/about" className="hover:text-blue-600">
-                About Me
-              </a>
-              <a href="/projects" className="hover:text-blue-600">
-                Side Quests
-              </a>
-              <a href="https://jtbelshe.substack.com/?utm_campaign=profile_chips" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 ">
-                The Great Escape
-              </a>
-              <a href="/techno-blogic" className="hover:text-blue-600">
-                Techno-Blogic
-              </a>
-              <a href="/woodwork" className="hover:text-blue-600">
-                Woodwork
-              </a>
-              <a href="/jacks-picks" className="hover:text-blue-600">
-                Jack's Picks
-              </a>
-              <a href="/contact-me" className="hover:text-blue-600">
-                Bang My Line
-              </a>
+          <nav className="mx-auto max-w-6xl p-4">
+            <div className="flex flex-col space-y-4 sm:flex-row sm:items-center sm:justify-between sm:space-y-0">
+              <Link href="/" className="text-2xl font-semibold sm:text-3xl">
+                Jack Belshé
+              </Link>
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-2 text-sm sm:gap-x-4 sm:text-base">
+                <a href="/about" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap">
+                  About Me
+                </a>
+                <a href="/projects" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap">
+                  Side Quests
+                </a>
+                <a 
+                  href="https://jtbelshe.substack.com/?utm_campaign=profile_chips" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap flex items-center"
+                >
+                  The Great Escape
+                </a>
+                <a href="/techno-blogic" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap">
+                  Techno-Blogic
+                </a>
+                <a href="/woodwork" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap">
+                  Woodwork
+                </a>
+                <a href="/jacks-picks" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap">
+                  Jack&apos;s Picks
+                </a>
+                <a href="/contact-me" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600transition-colors whitespace-nowrap">
+                  Bang My Line
+                </a>
+              </div>
             </div>
           </nav>
         </header>

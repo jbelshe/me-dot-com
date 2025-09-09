@@ -31,13 +31,13 @@ export default function AboutPage() {
       
       <div className="mb-8 text-left">
         <p className="text-lg mb-6">
-          Hi, I'm Jack. Some people call me JT. I'm an engineer. I like learning and building things.
+          Hi, I&apos;m Jack. Some people call me JT. I&apos;m an engineer. I like learning and building things.
           <br /><br />
-          I made this website because I'm fresh out of grad school and people say it may help me get a job.
+          I made this website because I&apos;m fresh out of grad school and people say it may help me get a job.
           <br /><br />
           Sound a bit desperate and unoriginal?
           <br /><br />
-          Could never be me! Let's have a little fun with this.
+          Could never be me! Let&apos;s have a little fun with this.
         </p>
       </div>
 

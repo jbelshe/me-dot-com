@@ -1,26 +1,25 @@
 'use client';
 
 import Image, { StaticImageData } from 'next/image';
-import { useState } from 'react';
+import Link from 'next/link';
 
 interface CardProps {
   title: string;
   imageSrc: StaticImageData | string;
   secondarySrc?: StaticImageData | string;
   alt: string;
+  route: string;
   className?: string;
 }
 
-export default function Card({ title, imageSrc, secondarySrc, alt, className = '' }: CardProps) {
-  const [isHovering, setIsHovering] = useState(false);
+export default function Card({ title, imageSrc, secondarySrc, alt, route, className = '' }: CardProps) {
   
   return (
-    <div
-      className={`bg-white rounded-lg shadow-md overflow-hidden group ${className}`}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
+    <Link
+      className={`bg-white rounded-lg shadow-md overflow-hidden  ${className} transition-shadow duration-300 hover:shadow-xl`}
+      href = {route}
     >
-      <div className="relative aspect-[1/1] bg-gray-50">
+      <div className="relative aspect-[1/1] bg-gray-50 group">
         <Image 
             src={imageSrc} 
             alt={alt} 
@@ -41,6 +40,6 @@ export default function Card({ title, imageSrc, secondarySrc, alt, className = '
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
       </div>
-    </div>
+    </Link>
   );
 }
