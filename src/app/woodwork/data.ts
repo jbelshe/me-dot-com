@@ -3,6 +3,7 @@
 interface Project {
   id: number;
   title: string;
+  subtitle?: string;
   imageSrc: string;
   secondarySrc?: string;
   route: string;

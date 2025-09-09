@@ -50,7 +50,11 @@ export default function ContactMePage() {
             <div className="flex-shrink-0">
               <button 
                 className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors duration-200 whitespace-nowrap"
-                onClick={() => {}}
+                onClick={() => {
+                  window.location.href = `mailto:${email.replace(/\[at\]/g, "@")
+                    .replace(/\[dot\]/g, ".")
+                    .replace(/-/g, "_")}`;
+                }}
               >
                 <Image src="/icons/email_white.svg" alt="Email" width={24} height={24} />
               </button>

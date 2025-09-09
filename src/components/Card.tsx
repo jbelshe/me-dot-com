@@ -5,21 +5,32 @@ import Link from 'next/link';
 
 interface CardProps {
   title: string;
+  subtitle?: string;
   imageSrc: StaticImageData | string;
   secondarySrc?: StaticImageData | string;
   alt: string;
   route: string;
   className?: string;
+  aspectRatio?: string; // e.g., "16/9", "4/3", "1/1"
 }
 
-export default function Card({ title, imageSrc, secondarySrc, alt, route, className = '' }: CardProps) {
+export default function Card({ 
+  title, 
+  subtitle,
+  imageSrc, 
+  secondarySrc, 
+  alt, 
+  route, 
+  className = '',
+  aspectRatio = '1/1' 
+}: CardProps) {
   
   return (
     <Link
       className={`bg-white rounded-lg shadow-md overflow-hidden  ${className} transition-shadow duration-300 hover:shadow-xl`}
       href = {route}
     >
-      <div className="relative aspect-[1/1] bg-gray-50 group">
+      <div className={`relative bg-gray-50 group`} style={{ aspectRatio }}>
         <Image 
             src={imageSrc} 
             alt={alt} 
@@ -38,7 +49,8 @@ export default function Card({ title, imageSrc, secondarySrc, alt, route, classN
         )}
       </div>
       <div className="p-4">
-        <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+        <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+        {subtitle && <p className="text-md text-gray-600">{subtitle}</p>}
       </div>
     </Link>
   );
