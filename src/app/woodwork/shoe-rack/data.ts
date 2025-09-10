@@ -1,44 +1,34 @@
-interface ImageData {
-  src: string;
-  alt: string;
-  caption?: string;
-}
+import { ImageData } from '@/types/ImageData';
 
 export const shoeRackImages: ImageData[] = [
   {
-    src: '/images/woodwork/shoe_rack/gallery/shoe_rack5.jpeg',
+    src: '/images/woodwork/shoe_rack/shoe_rack_header.jpeg',
     alt: '',
     caption: ''
   },
   {
     src: '/images/woodwork/shoe_rack/gallery/shoe_rack_s1.jpg',
-    alt: 'Shoe rack installed in closet',
-    caption: 'The completed shoe rack installed in the closet.'
+    alt: '',
   },
   {
     src: '/images/woodwork/shoe_rack/gallery/shoe_rack_s2.jpg',
-    alt: 'Shoe rack close-up',
-    caption: 'Close-up of the shoe rack showing the joinery and finish.'
+    alt: '',
   },
   {
     src: '/images/woodwork/shoe_rack/gallery/shoe_rack1.jpeg',
-    alt: 'Shoe rack construction',
-    caption: 'Early construction phase showing the frame assembly.'
+    alt: '',
   },
   {
     src: '/images/woodwork/shoe_rack/gallery/shoe_rack2.PNG',
-    alt: 'Shoe rack materials',
-    caption: 'Materials used: reclaimed wood from IKEA shelves.'
+    alt: '',
   },  
   {
     src: '/images/woodwork/shoe_rack/gallery/shoe_rack3.jpeg',
     alt: '',
-    caption: ''
   },
   {
     src: '/images/woodwork/shoe_rack/gallery/shoe_rack4.jpeg',
     alt: '',
-    caption: ''
   },  
 
 ];

@@ -52,7 +52,7 @@ export default function Home() {
         </div>
       </div>
       <div className="mb-8">
-        <h2 className="text-3xl font-bold mb-6 text-left">How has he done this?</h2>
+        <h2 className="text-3xl font-bold mb-6 text-left">Yes, yes, but HOW has he done this?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Link href="/uses" className="bg-gray-50 hover:bg-gray-100 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl p-6 flex items-center justify-center border border-gray-100">
             <span className="text-lg font-semibold text-gray-800">How</span>
@@ -63,7 +63,7 @@ export default function Home() {
         </div>
       </div>
       <div className="mb-8">
-        <h2 className="text-3xl font-bold mb-6 text-left">What else does this guy have going on?</h2>
+        <h2 className="text-3xl font-bold mb-6 text-left">What else you got going on?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Card
             title="Woodwork"
