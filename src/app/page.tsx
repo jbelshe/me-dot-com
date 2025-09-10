@@ -29,7 +29,7 @@ export default function Home() {
           <Card
             title="Jack's Picks"
             subtitle="Get to know our host better with some book and podcast recs"
-            imageSrc="/images/home/who-am-i.png"
+            imageSrc="/images/home/my_picks.png"
             alt="Jack's Picks"
             route="/jacks-picks"
             aspectRatio="16/9"
