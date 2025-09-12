@@ -60,7 +60,7 @@ export default function RootLayout({
                   Jack&apos;s Picks
                 </a>
                 <a href="/contact-me" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600transition-colors whitespace-nowrap">
-                  Bang My Line
+                  Contact
                 </a>
               </div>
             </div>

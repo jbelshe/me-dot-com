@@ -7,7 +7,7 @@ import { useState } from 'react';
 export default function EmailContact() {
     const [isHovering, setIsHovering] = useState(false);
     const [emailCopied, setEmailCopied] = useState("\u00A0");
-    const email = 'bang-my-line[at]jackbelshe[dot]com';
+    const email = 'talk-to-jack[at]jackbelshe[dot]com';
     const copied_message = "Email copied to clipboard!";
     
     return (

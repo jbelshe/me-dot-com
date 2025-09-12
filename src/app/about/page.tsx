@@ -56,7 +56,10 @@ export default function AboutPage() {
       </div>
 
       {/* Version Selectors */}
-      <div className="bg-white p-6 rounded-lg shadow-md mb-12 space-y-4">
+      <div className="bg-white p-6 rounded-lg shadow-md mb-12 space-y-4 border-1 border-gray-200">
+        <p className="text-lg font-semibold mb-6">
+          Customize my bio to your preferred length
+        </p>
         {(Object.keys(sectionTitles) as SectionType[]).map((section) => (
           <div key={section} className="flex flex-col sm:flex-row sm:items-center gap-4 py-2 border-b border-gray-100 last:border-0 last:pb-0">
             <h2 className="text-lg font-semibold text-gray-800 min-w-[100px] sm:min-w-[120px] mr-4">
