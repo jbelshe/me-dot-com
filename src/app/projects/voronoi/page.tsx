@@ -3,7 +3,6 @@
 import VoronoiPlot from '@/components/VoronoiPlot';
 import { useState } from 'react';
 
-import data from './data.json';
 import { colorPalettes } from './content';
 
 export default function VoronoiPage() {
@@ -45,10 +44,6 @@ export default function VoronoiPage() {
                                     setNumOfPoints(value);
                                     setIsPointCountValid(value >= 4 && value <= 100);
                                 }}
-                                // onBlur={(e) => {
-                                //     const value = e.target.valueAsNumber;
-                                //     setIsPointCountValid(value >= 4 && value <= 100);
-                                // }}
                                 className={
                                     `w-full px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 border ${
                                         isPointCountValid 
@@ -63,8 +58,8 @@ export default function VoronoiPage() {
                             disabled={!isPointCountValid}
                             className="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:hover:bg-blue-500 disabled:opacity-50 transition-colors"
                             onClick={() =>  {
-                                fetch('https://ttr4epvxq2mfjsno7jiksse2lm0kgcut.lambda-url.us-east-1.on.aws/?points=' + numOfPoints)
-                                    .then(response => response.json())
+                                fetch('/api/voronoi?points=' + numOfPoints)
+                                .then(response => response.json())
                                     .then(data => {
                                         setPlotData(data);
                                         console.log(data);
@@ -74,7 +69,12 @@ export default function VoronoiPage() {
                     >
                         Generate
                     </button>
+
+                    
                     </div>
+                    {  
+                        // TODO: add custom color system 
+                    }
                 </div>
                 
                 {/* Right side - Voronoi Plot */}
