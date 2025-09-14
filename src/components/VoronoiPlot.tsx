@@ -71,8 +71,8 @@ export default function VoronoiPlot({
     const plotData: Data[] = [pointsData, ...regionsData];
 
     // Calculate axis ranges with some padding
-    const allX = [...points.map(p => p[0]), ...vertices.map(v => v[0])];
-    const allY = [...points.map(p => p[1]), ...vertices.map(v => v[1])];
+    //const allX = [...points.map(p => p[0]), ...vertices.map(v => v[0])];
+    //const allY = [...points.map(p => p[1]), ...vertices.map(v => v[1])];
     //const xRange = allX.length > 0 ? [Math.min(...allX) - 0.1, Math.max(...allX) + 0.1] : [0, 1];
     //const yRange = allY.length > 0 ? [Math.min(...allY) - 0.1, Math.max(...allY) + 0.1] : [0, 1];
     const xRange = [0, 1];

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import BlogCard from '@/components/BlogCard';
 import { data } from './content';
 import Link from 'next/link';
@@ -47,7 +47,7 @@ export default function TheGreatEscapePage() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {mappedData.map((post, index) => (
+          {mappedData.map((post) => (
             <BlogCard
               key={post.id}
               title={post.title}

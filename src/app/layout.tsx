@@ -69,7 +69,7 @@ export default function RootLayout({
         </header>
 
         {/* Main content */}
-        <main className="flex-1 mx-auto w-full max-w-5xl p-6">{children}</main>
+        <main className="flex-1 mx-auto w-full max-w-5xl p-6">{children}<Analytics/></main>
 
         {/* Global Footer */}
         <footer className="mt-8 border-t bg-white py-4 text-center text-sm text-gray-500">
