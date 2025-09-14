@@ -43,7 +43,7 @@ export default function RootLayout({
                   Side Quests
                 </a>
                 <a 
-                  href="https://jtbelshe.substack.com/?utm_campaign=profile_chips" 
+                  href="/the-great-escape" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap flex items-center"
