@@ -1,6 +1,6 @@
 'use client';
 
-import { BlogCardProps } from '@/types/BlogData';
+import { BlogCardProps } from '@/types/BlogCardData';
 import Link from 'next/link';
 import Image from 'next/image';
 

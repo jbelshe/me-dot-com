@@ -51,9 +51,6 @@ export default function TheGreatEscapePage() {
             >
               Popular
             </button>
-            {// TODO Add a drop down optoin to select grid vs list vs sliders
-            // for sliders, I imagine it having a horizontal slide for Asia vs Europe ?
-            }
           </div>
 
           <DropDown 

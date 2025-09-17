@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { BlogCardProps } from '@/types/BlogData';
+import { BlogCardProps } from '@/types/BlogCardData';
 
 
 export default function BlogCard(data: BlogCardProps) {
