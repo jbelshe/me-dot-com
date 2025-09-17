@@ -8,6 +8,7 @@ import { colorPalettes } from './content';
 export default function VoronoiPage() {
     const [numOfPoints, setNumOfPoints] = useState(10);
     const [isPointCountValid, setIsPointCountValid] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const [plotData, setPlotData] = useState( {
         points: [],
         vertices: [],
@@ -58,12 +59,14 @@ export default function VoronoiPage() {
                             disabled={!isPointCountValid}
                             className="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:hover:bg-blue-500 disabled:opacity-50 transition-colors"
                             onClick={() =>  {
+                                setIsLoading(true);
                                 fetch('/api/voronoi?points=' + numOfPoints)
                                 .then(response => response.json())
                                     .then(data => {
                                         setPlotData(data);
                                         console.log(data);
                                         getNewColors();
+                                        setIsLoading(false);
                                     });
                             }}
                     >
@@ -90,9 +93,15 @@ export default function VoronoiPage() {
                                 regions={plotData.regions}
                                 colors={myColors}
                             />
-                        ) : (
-                            <div className="text-gray-400">Click Generate to create a Voronoi diagram</div>
-                        )}
+                        ) : 
+                            isLoading ? (
+                                <div className="min-h-screen flex items-center justify-center">
+                                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
+                                </div>
+                            ) : (
+                                <div className="text-gray-400">Click Generate to create a Voronoi diagram</div>
+                            )
+                        }
                     </div>
                 </div>
             </div>

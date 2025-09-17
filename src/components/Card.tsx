@@ -37,7 +37,7 @@ export default function Card({
             fill 
             className={`object-cover opacity-100 ${secondarySrc ? 'transition-opacity duration-500 group-hover:opacity-0' : ''}`} 
             sizes="(max-width: 768px) 100vw, 33vw" 
-            priority={false} />
+            priority={true} />
         {secondarySrc && (
           <Image 
             src={secondarySrc} 

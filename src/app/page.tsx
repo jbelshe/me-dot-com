@@ -4,18 +4,15 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="min-h-screen p-8 max-w-6xl mx-auto">
-      {/* Welcome Section */}
       <div className="text-center mb-16">
         <h1 className="text-5xl md:text-7xl font-bold mb-4">Welcome To Jack&apos;s Website</h1>
         <p className="text-xl md:text-2xl text-gray-600">Give him a break, it&apos;s still a work in progress</p>
       </div>
       
-      {/* Who is this man? Section */}
       <div className="mb-8">
         <h2 className="text-3xl font-bold mb-6 text-left">Who is this man?</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* About Me Card */}
           <Card
             title="About Me"
             subtitle="The existential question of self"
@@ -24,8 +21,7 @@ export default function Home() {
             route="/about"
             aspectRatio="16/9"
           />
-          
-          {/* Jack's Picks Card */}
+        
           <Card
             title="Jack's Picks"
             subtitle="Get to know our host better with some book and podcast recs"
@@ -36,7 +32,6 @@ export default function Home() {
           />
         </div>
       </div>
-      {/* What has this man done? <div className="grid grid-cols-1 gap-8"> Section */}
       <div className="mb-8">
         <h2 className="text-3xl font-bold mb-6 text-left">What has this man done?</h2>
         <div className="flex justify-center mb-4">

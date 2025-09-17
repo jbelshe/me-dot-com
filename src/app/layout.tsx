@@ -43,12 +43,7 @@ export default function RootLayout({
                 <a href="/projects" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap">
                   Side Quests
                 </a>
-                <a 
-                  href="/the-great-escape" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap flex items-center"
-                >
+                <a href="/the-great-escape" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap flex items-center">
                   The Great Escape
                 </a>
                 <a href="/techno-blogic" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap">
