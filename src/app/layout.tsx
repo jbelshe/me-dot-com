@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -64,7 +65,7 @@ export default function RootLayout({
         </header>
 
         {/* Main content */}
-        <main className="flex-1 mx-auto w-full max-w-5xl p-6">{children}<Analytics/></main>
+        <main className="flex-1 mx-auto w-full max-w-5xl p-6">{children}<Analytics/><SpeedInsights/></main>
 
         {/* Global Footer */}
         <footer className="mt-8 border-t bg-white py-4 text-center text-sm text-gray-500">
