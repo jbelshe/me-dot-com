@@ -4,95 +4,95 @@ import { ImageData } from '@/types/ImageData';
 
 export const bookshelfImages: ImageData[] = [
   {
-    src: '/images/woodwork/bookshelf/bookshelf_header.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/bookshelf_header.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf_s01.jpg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf_s01.jpg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf_s02.jpg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf_s02.jpg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf_s03.jpg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf_s03.jpg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf_s04.jpg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf_s04.jpg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf_s05.png',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf_s05.png',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf_s06.jpg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf_s06.jpg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf_s07.jpg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf_s07.jpg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf_s08.jpg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf_s08.jpg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf_s09.jpg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf_s09.jpg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf_s10.jpg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf_s10.jpg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf01.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf01.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf02.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf02.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf03.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf03.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf04.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf04.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf05.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf05.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf06.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf06.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf07.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf07.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf08.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf08.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf09.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf09.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf091.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf091.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf10.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf10.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/bookshelf/gallery/bookshelf11.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf11.jpeg',
     alt: '',
   },
 ];

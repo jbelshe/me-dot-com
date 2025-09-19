@@ -4,8 +4,6 @@ import dynamic from "next/dynamic";
 import type { Layout, Data } from "plotly.js";
 
 const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
-// import Plot from "react-plotly.js";
-// import type { Data, Layout } from 'plotly.js';
 
 interface VoronoiPlotProps {
     points: Array<Array<number>>;

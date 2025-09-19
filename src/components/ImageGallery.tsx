@@ -38,7 +38,7 @@ export default function ImageGallery({ images, description }: ImageGalleryProps)
           alt={images[currentIndex].alt}
           fill
           className="object-contain"
-          priority
+          priority={true}
         />
 
         {/* Navigation Arrows */}

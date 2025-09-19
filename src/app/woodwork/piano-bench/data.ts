@@ -4,47 +4,47 @@ import { ImageData } from '@/types/ImageData';
 
 export const pianoBenchImages: ImageData[] = [
     {
-        src: '/images/woodwork/piano_bench/piano_bench_header.jpeg',
+        src: 'https://cdn.jackbelshe.com/images/woodwork/piano_bench/piano_bench_header.jpeg',
         alt: ''
     },
     {
-        src: '/images/woodwork/piano_bench/gallery/piano_bench_s01.png',
+        src: 'https://cdn.jackbelshe.com/images/woodwork/piano_bench/gallery/piano_bench_s01.png',
         alt: ''
     },
     {
-        src: '/images/woodwork/piano_bench/gallery/piano_bench_s02.png',
+        src: 'https://cdn.jackbelshe.com/images/woodwork/piano_bench/gallery/piano_bench_s02.png',
         alt: ''
     },
     {
-        src: '/images/woodwork/piano_bench/gallery/piano_bench_0.jpeg',
+        src: 'https://cdn.jackbelshe.com/images/woodwork/piano_bench/gallery/piano_bench_0.jpeg',
         alt: ''
     },
     {
-        src: '/images/woodwork/piano_bench/gallery/piano_bench_1.jpeg',
+        src: 'https://cdn.jackbelshe.com/images/woodwork/piano_bench/gallery/piano_bench_1.jpeg',
         alt: ''
     },
     {
-        src: '/images/woodwork/piano_bench/gallery/piano_bench_2.jpeg',
+        src: 'https://cdn.jackbelshe.com/images/woodwork/piano_bench/gallery/piano_bench_2.jpeg',
         alt: ''
     },
     {
-        src: '/images/woodwork/piano_bench/gallery/piano_bench_3.jpeg',
+        src: 'https://cdn.jackbelshe.com/images/woodwork/piano_bench/gallery/piano_bench_3.jpeg',
         alt: ''
     },
     {
-        src: '/images/woodwork/piano_bench/gallery/piano_bench_31.jpeg',
+        src: 'https://cdn.jackbelshe.com/images/woodwork/piano_bench/gallery/piano_bench_31.jpeg',
         alt: ''
     },
     {
-        src: '/images/woodwork/piano_bench/gallery/piano_bench_4.jpeg',
+        src: 'https://cdn.jackbelshe.com/images/woodwork/piano_bench/gallery/piano_bench_4.jpeg',
         alt: ''
     },
     {
-        src: '/images/woodwork/piano_bench/gallery/piano_bench_5.jpeg',
+        src: 'https://cdn.jackbelshe.com/images/woodwork/piano_bench/gallery/piano_bench_5.jpeg',
         alt: ''
     },
     {
-        src: '/images/woodwork/piano_bench/gallery/piano_bench_6.jpeg',
+        src: 'https://cdn.jackbelshe.com/images/woodwork/piano_bench/gallery/piano_bench_6.jpeg',
         alt: ''
     },
     

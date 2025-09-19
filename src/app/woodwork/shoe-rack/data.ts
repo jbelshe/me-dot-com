@@ -2,32 +2,32 @@ import { ImageData } from '@/types/ImageData';
 
 export const shoeRackImages: ImageData[] = [
   {
-    src: '/images/woodwork/shoe_rack/shoe_rack_header.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/shoe_rack/shoe_rack_header.jpeg',
     alt: '',
     caption: ''
   },
   {
-    src: '/images/woodwork/shoe_rack/gallery/shoe_rack_s1.jpg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/shoe_rack/gallery/shoe_rack_s1.jpg',
     alt: '',
   },
   {
-    src: '/images/woodwork/shoe_rack/gallery/shoe_rack_s2.jpg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/shoe_rack/gallery/shoe_rack_s2.jpg',
     alt: '',
   },
   {
-    src: '/images/woodwork/shoe_rack/gallery/shoe_rack1.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/shoe_rack/gallery/shoe_rack1.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/shoe_rack/gallery/shoe_rack2.PNG',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/shoe_rack/gallery/shoe_rack2.PNG',
     alt: '',
   },  
   {
-    src: '/images/woodwork/shoe_rack/gallery/shoe_rack3.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/shoe_rack/gallery/shoe_rack3.jpeg',
     alt: '',
   },
   {
-    src: '/images/woodwork/shoe_rack/gallery/shoe_rack4.jpeg',
+    src: 'https://cdn.jackbelshe.com/images/woodwork/shoe_rack/gallery/shoe_rack4.jpeg',
     alt: '',
   },  
 

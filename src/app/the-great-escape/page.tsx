@@ -37,7 +37,6 @@ export default function TheGreatEscapePage() {
     fetchData();
   }, []);
 
-  // Update mappedData when sortBy changes
   useEffect(() => {
     if (data.length === 0) return;
     

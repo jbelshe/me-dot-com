@@ -32,7 +32,7 @@ export default function AboutPage() {
       <div className="flex justify-center mb-6">
         <div className="relative h-80 w-80 rounded-full overflow-hidden border-2 border-black">
           <Image
-            src="/images/about/prof_front1.jpg"
+            src="https://cdn.jackbelshe.com/images/about/prof_front1.jpg"
             alt="Profile"
             fill
             className="object-cover"

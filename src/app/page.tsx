@@ -78,8 +78,8 @@ export default function Home() {
           />
           <Card
             title="Techno-Blogic"
-            subtitle="Coming soon..."
-            imageSrc="/images/home/coming_soon.png"
+            subtitle="This one is my tech blog"
+            imageSrc="/images/home/techno-blogic1.png"
             alt="Techno-Blogic"
             route="/techno-blogic"
             aspectRatio="16/9"
