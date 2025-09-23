@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import BlogCard from '@/components/BlogCard';
 import BlogList from '@/components/BlogList';
 import { BlogHeaderData } from '@/types/BlogHeaderData';
-import Link from 'next/link';
 import DropDown from '@/components/DropDown';
+import Link from 'next/link';
 
 export default function TechnoBlogicPage() {
   const [data, setData] = useState<BlogHeaderData[]>([]);
@@ -15,7 +15,7 @@ export default function TechnoBlogicPage() {
   const [mappedData, setMappedData] = useState<BlogHeaderData[]>([]);
 
   // Fetch data on component mount
-  useEffect(() => {
+  useEffect(() => { 
     const fetchData = async () => {
       try {
         const response = await fetch('/api/techno-blogic');
