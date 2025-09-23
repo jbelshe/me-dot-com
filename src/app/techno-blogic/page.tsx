@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import BlogCard from '@/components/BlogCard';
 import BlogList from '@/components/BlogList';
 import { BlogHeaderData } from '@/types/BlogHeaderData';
-import { data } from './content';
 import Link from 'next/link';
 import DropDown from '@/components/DropDown';
 

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,34 +33,7 @@ export default function RootLayout({
         {/* Global Navbar */}
         <header className="w-full border-b bg-white shadow-sm">
           <nav className="mx-auto max-w-6xl p-4">
-            <div className="flex flex-col space-y-4 sm:flex-row sm:items-center sm:justify-between sm:space-y-0">
-              <Link href="/" className="text-2xl font-semibold sm:text-3xl">
-                Jack Belshé
-              </Link>
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-2 text-sm sm:gap-x-4 sm:text-base">
-                <a href="/about" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap">
-                  About Me
-                </a>
-                <a href="/projects" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap">
-                  Side Quests
-                </a>
-                <a href="/the-great-escape" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap flex items-center">
-                  The Great Escape
-                </a>
-                <a href="/techno-blogic" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap">
-                  Techno-Blogic
-                </a>
-                <a href="/woodwork" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap">
-                  Woodwork
-                </a>
-                <a href="/jacks-picks" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600 transition-colors whitespace-nowrap">
-                  Jack&apos;s Picks
-                </a>
-                <a href="/contact-me" className="px-2.5 py-1 rounded hover:bg-gray-50 hover:text-blue-600transition-colors whitespace-nowrap">
-                  Contact
-                </a>
-              </div>
-            </div>
+            <Navbar />
           </nav>
         </header>
 
@@ -75,3 +48,4 @@ export default function RootLayout({
     </html>
   );
 }
+

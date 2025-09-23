@@ -16,7 +16,7 @@ export default function Home() {
           <Card
             title="About Me"
             subtitle="The existential question of self"
-            imageSrc="/images/home/who-am-i.png"
+            imageSrc="https://cdn.jackbelshe.com/images/home/who-am-i.png"
             alt="Jack Belshe"
             route="/about"
             aspectRatio="16/9"
@@ -25,7 +25,7 @@ export default function Home() {
           <Card
             title="Jack's Picks"
             subtitle="Get to know our host better with some book and podcast recs"
-            imageSrc="/images/home/my_picks.png"
+            imageSrc="https://cdn.jackbelshe.com/images/home/my_picks.png"
             alt="Jack's Picks"
             route="/jacks-picks"
             aspectRatio="16/9"
@@ -38,7 +38,7 @@ export default function Home() {
             <Card
               title="Projects"
               subtitle="The things I do for the love of the game"
-              imageSrc="/images/home/voronoi_3.png"
+              imageSrc="https://cdn.jackbelshe.com/images/home/voronoi_3.png"
               alt="Side Quests"
               route="/projects"
               aspectRatio="4/3"
@@ -63,7 +63,7 @@ export default function Home() {
           <Card
             title="Woodwork"
             subtitle="What I used to do when I lived in a place with a backyard"
-            imageSrc="/images/home/woodwork1.jpeg"
+            imageSrc="https://cdn.jackbelshe.com/images/home/woodwork1.jpeg"
             alt="Woodwork"
             route="/woodwork"
             aspectRatio="16/9"
@@ -71,7 +71,7 @@ export default function Home() {
           <Card
             title="The Great Escape"
             subtitle="This one is my travel blog"
-            imageSrc="/images/home/great_escape1.jpeg"
+            imageSrc="https://cdn.jackbelshe.com/images/home/great_escape1.jpeg"
             alt="The Great Escape"
             route="/the-great-escape"
             aspectRatio="16/9"
@@ -79,7 +79,7 @@ export default function Home() {
           <Card
             title="Techno-Blogic"
             subtitle="This one is my tech blog"
-            imageSrc="/images/home/techno-blogic1.png"
+            imageSrc="https://cdn.jackbelshe.com/images/home/techno-blogic1.png"
             alt="Techno-Blogic"
             route="/techno-blogic"
             aspectRatio="16/9"

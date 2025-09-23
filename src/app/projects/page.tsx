@@ -7,7 +7,7 @@ export default function ProjectsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
         <Card
           title="Voronoi"
-          imageSrc="/images/home/voronoi_3.png"
+          imageSrc="https://cdn.jackbelshe.com/images/home/voronoi_3.png"
           alt="Voronoi"
           route="/projects/voronoi"
           aspectRatio="16/9"
