@@ -24,10 +24,6 @@ export const bookshelfImages: ImageData[] = [
     alt: '',
   },
   {
-    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf_s05.png',
-    alt: '',
-  },
-  {
     src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf_s06.jpg',
     alt: '',
   },
@@ -89,10 +85,6 @@ export const bookshelfImages: ImageData[] = [
   },
   {
     src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf10.jpeg',
-    alt: '',
-  },
-  {
-    src: 'https://cdn.jackbelshe.com/images/woodwork/bookshelf/gallery/bookshelf11.jpeg',
     alt: '',
   },
 ];
