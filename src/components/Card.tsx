@@ -22,7 +22,7 @@ export default function Card({
   alt, 
   route, 
   className = '',
-  aspectRatio = '1/1' 
+  aspectRatio = '1/1'
 }: CardProps) {
   
   return (
