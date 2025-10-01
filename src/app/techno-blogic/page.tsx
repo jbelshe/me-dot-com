@@ -21,6 +21,7 @@ export default function TechnoBlogicPage() {
         const response = await fetch('/api/techno-blogic');
         const result = await response.json();
         setData(result);
+        console.log(result)
         
         // Sort data by most recent
         const recent = [...result].sort((a, b) => 

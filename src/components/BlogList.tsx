@@ -5,12 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function BlogList(data: BlogCardProps) {
+  const imageSrc = `https://cdn.jackbelshe.com${data.imageSrc}`;
   return (
     <div className="bg-white mb-5 rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl max-w-3xl mx-auto">
       <Link href={data.route} target="_blank" className="flex flex-row h-32">
         <div className="relative w-1/4 min-w-[150px] bg-gray-50">
           <Image
-            src={data.imageSrc}
+            src={imageSrc}
             alt={data.alt}
             fill
             className="object-cover"

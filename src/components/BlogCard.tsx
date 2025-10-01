@@ -6,6 +6,7 @@ import { BlogCardProps } from '@/types/BlogCardData';
 
 
 export default function BlogCard(data: BlogCardProps) {
+  const imageSrc = `https://cdn.jackbelshe.com${data.imageSrc}`;
   return (
     <Link
       className={`bg-white rounded-lg shadow-md overflow-hidden  ${data.className} transition-shadow duration-300 hover:shadow-xl`}
@@ -14,7 +15,7 @@ export default function BlogCard(data: BlogCardProps) {
     >
       <div className={`relative bg-gray-50 group`} style={{ aspectRatio: data.aspectRatio }}>
         <Image 
-            src={data.imageSrc} 
+            src={imageSrc} 
             alt={data.alt} 
             fill 
             className={`object-cover`} 
