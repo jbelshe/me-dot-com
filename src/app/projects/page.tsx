@@ -8,8 +8,18 @@ export default function ProjectsPage() {
         <Card
           title="Voronoi"
           imageSrc="https://cdn.jackbelshe.com/images/home/voronoi_3.png"
+          subtitle='Cool colors and shapes'
           alt="Voronoi"
           route="/projects/voronoi"
+          aspectRatio="16/9"
+          className="w-full"
+        />
+        <Card
+          title="Anki ETL"
+          imageSrc="/images/projects/anki-etl/system_diagram.jpeg"
+          subtitle='Automated flashcard pipeline'
+          alt="Anki"
+          route="/projects/anki"
           aspectRatio="16/9"
           className="w-full"
         />
