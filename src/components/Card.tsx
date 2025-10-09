@@ -36,15 +36,19 @@ export default function Card({
             alt={alt} 
             fill 
             className={`object-cover opacity-100 ${secondarySrc ? 'transition-opacity duration-500 group-hover:opacity-0' : ''}`} 
-            sizes="(max-width: 768px) 100vw, 33vw" 
-            priority={true} />
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            quality={90}
+            priority={true}
+            loading="eager" />
         {secondarySrc && (
           <Image 
             src={secondarySrc} 
             alt={alt} 
             fill 
             className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-            sizes="(max-width: 768px) 100vw, 33vw" 
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            quality={90}
+            loading="lazy"
             priority={false} /> 
         )}
       </div>
