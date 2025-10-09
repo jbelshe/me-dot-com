@@ -15,8 +15,17 @@ export default function ProjectsPage() {
           className="w-full"
         />
         <Card
+          title="Substack RSS Parser Cron Job"
+          imageSrc="https://cdn.jackbelshe.com/images/projects/rss/system_diagram.png"
+          subtitle='Automated parsing of Substack RSS feeds'
+          alt="RSS"
+          route="/projects/rss"
+          aspectRatio="16/9"
+          className="w-full"
+        />
+        <Card
           title="Anki ETL"
-          imageSrc="/images/projects/anki-etl/system_diagram.jpeg"
+          imageSrc="https://cdn.jackbelshe.com/images/projects/anki-etl/system_diagram.jpeg"
           subtitle='Automated flashcard pipeline'
           alt="Anki"
           route="/projects/anki"
@@ -27,7 +36,7 @@ export default function ProjectsPage() {
 
       <div className="max-w-4xl mx-auto mt-12">
         <div className="text-center mb-12">
-          <h1 className="text-3xl font-bold mb-4">Still working on this one...</h1>
+          <h1 className="text-3xl font-bold mb-4">Still working on getting everything up here...</h1>
           <p className="text-xl mb-8">Reach out directly if you want to see some of those demos</p>
         </div>
       </div>

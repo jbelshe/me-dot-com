@@ -1,6 +1,10 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function AnkiPage() {
+
+    const codeLink = "https://github.com/jbelshe/anki-language-learner";
     return (
         <div className="min-h-screen max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-sm">
 
@@ -36,7 +40,7 @@ export default function AnkiPage() {
                 <p>Luckily the application, Anki, that I use has an API. So I made a simple ETL (ETL = Extract Translate Load) Pipeline to do automate my card creation and upload for me.</p>
             </div>
             <div className="justify-center border-2 border-gray-200 mt-6 rounded p-4">
-                <img src="/images/projects/anki-etl/system_diagram.jpeg" alt="Anki ETL System Diagram" />
+                <Image src="https://cdn.jackbelshe.com/images/projects/anki-etl/system_diagram.jpeg" alt="Anki ETL System Diagram" width={800} height={600}/>
                 <p className="text-center mt-4">(System Diagram)</p>
             </div>
             <details className="mt-6 border-2 border-gray-200 rounded p-4 group">
@@ -87,32 +91,35 @@ export default function AnkiPage() {
             </details>
             <details className="mt-6 border-2 border-gray-200 rounded p-4 group">
                 <summary className="cursor-pointer flex items-center">
-                    <h2 className="text-2xl font-bold">Code</h2>
+                    <h2 className="text-2xl font-bold">Dependencies</h2>
                     <svg className="w-6 h-6 ml-2 transform -rotate-90 transition-transform duration-200 group-open:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                 </summary>
                 <ul className="list-disc pl-6 space-y-2 mt-2">
-                    <li><b>Flashcards (json):</b>  Cards formatted and uploaded to Anki Application via AnkiConnect API</li>
-                    <li><b>Audio Files (mp3):</b>  MP3 files generated using gTTS and moved to local Anki media folder</li>
-                    <li><b>Execution Logs (txt):</b>  Generated on each run documenting words uploads succeeded or failed and why</li>
-                    <li><b>File Archives (txt, csv, html):</b>  Stores input files just processed</li>
+                    <li><b>gTTS:</b>  Python library for making calls to Google Text To Speech</li>
+                    <li><b>requests:</b>  Python library used for API calls</li>
+                    <li><b>openai:</b> library for making calls to openai</li>
+                    <li><b>beautifulsoup4:</b>  library for parsing html </li>
+                    <li><b>google-cloud-translate:</b>  library for making calls to google translate</li>
                 </ul>
             </details>
             <details className="mt-6 border-2 border-gray-200 rounded p-4 group">
                 <summary className="cursor-pointer flex items-center">
-                    <h2 className="text-2xl font-bold">Project Description</h2>
+                    <h2 className="text-2xl font-bold">Code + High Level Program Description</h2>
                     <svg className="w-6 h-6 ml-2 transform -rotate-90 transition-transform duration-200 group-open:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                 </summary>
                 <ul className="list-disc space-y-2 mt-4">
-                    <p>To trigger the script to run, it must be run on the local host and the desired language must be passed in as a parameter (example: “python3 translator.py German”)</p>
+                    <p>Code Accessible at: <a className='text-blue-600 underline hover:text-blue-800 transition-colors' href={codeLink}>{codeLink}</a></p>
                     <br></br>
-                    <p>One the script is called, the operating directory is set based off of what language the script was called for (ex. German).  The script checks the “Input” folder to see what files exists.  If the files exist and are not empty, they are individually parsed to extract the words.</p><br></br>
+                    <p>To trigger the script to run, I just activate my python environment and run it my the local host from my terminal.  In the command lines, I input the desired language (example: “python3 translator.py German”)</p>
+                    <br></br>
+                    <p>Once the script is called, the operating directory is set based off of what language the script was called for (ex. German).  The script checks the “Input” folder to see what files exists.  If the files exist and are not empty, they are individually parsed to extract the words.</p><br></br>
                     <p>All input files provide words in a different format, so it is important to extract all relevant words and get them in a matching and appropriate format.  See the image below for the generalized flow of data and it&apos;s transformations as it goes through the system.</p>
                     <div className="justify-center border-2 border-gray-200 my-6 rounded p-4">
-                        <img src="/images/projects/anki-etl/inputs.jpeg" alt="Anki Flow" width={800} height={600} />
+                        <Image src="https://cdn.jackbelshe.com/images/projects/anki-etl/inputs.jpeg" alt="Anki Flow" width={800} height={600} />
                         <p className="text-center mt-4">(Input file transformation flow)</p>
                     </div>
                     <p>Each input file requires different handling.  For the manual translations is in the correct format already since it was uploaded with its desired translation, so it just needs to be parsed according to what the delimiter is set to.  </p>
