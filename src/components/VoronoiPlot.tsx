@@ -33,7 +33,15 @@ export default function VoronoiPlot({
         y: points.map(p => p[1]),
         mode: 'markers',
         type: 'scatter',
-        marker: { size: 5, color: 'blue' },
+        marker: { 
+            size: 5, 
+            color: 'blue',
+            line: {
+                width: 1,
+                color: 'white'  // Optional: adds a white border to make points more visible
+            },
+            opacity: 1
+        },
         //name: 'Points',
         visible: showPoints,
         showlegend: false
@@ -56,7 +64,9 @@ export default function VoronoiPlot({
             y,
             fill: 'toself',
             fillcolor: color,
-            line: { color: 'black', width: 1, showlegend: false},
+            opacity: 0.8,  // Make regions slightly transparent
+            line: { color: 'black', width: 1, showlegend: false },
+            // Ensure regions are drawn below points by keeping them earlier in the array
             type: 'scatter',
             mode: 'lines',
             name: `Region ${regionId}`,
@@ -65,8 +75,10 @@ export default function VoronoiPlot({
         };
     });
 
-    // Combine all data
-    const plotData: Data[] = [pointsData, ...regionsData];
+    // Combine all data - points first to ensure they're on top
+    // Plotly renders elements in the order they appear in the array,
+    // with later elements drawn on top of earlier ones
+    const plotData: Data[] = [...regionsData, pointsData];
 
     // Calculate axis ranges with some padding
     //const allX = [...points.map(p => p[0]), ...vertices.map(v => v[0])];
