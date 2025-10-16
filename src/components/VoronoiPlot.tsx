@@ -23,7 +23,7 @@ export default function VoronoiPlot({
     regions = {},
     width = 800,
     height = 800,
-    colors = ['#ffc2d1'],
+    colors = ['#ffffff'],
     showPoints = true,
     showRegions = true
 }: VoronoiPlotProps) {
@@ -58,7 +58,18 @@ export default function VoronoiPlot({
             x.push(x[0]);
             y.push(y[0]);
         }
-        const color = colors[idx % colors.length];
+        if (colors.length == 0) {
+            colors = ['#ffffff'];
+        }
+
+        // let color = '';
+        // if (Object.keys(regions).length > 20) {
+        //     color = colors[idx % colors.length]
+        // }
+        // else {
+        //     color = colors[Math.floor(Math.random() * colors.length)];
+        // }
+        const color = colors[idx % colors.length]
         return {
             x,
             y,

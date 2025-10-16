@@ -1,9 +1,11 @@
 'use client';
 
 import VoronoiPlot from '@/components/VoronoiPlot';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { colorPalettes } from './content';
+
+type ColorMode = 'random' | 'custom';
 
 export default function VoronoiPage() {
     const [numOfPoints, setNumOfPoints] = useState(10);
@@ -15,23 +17,78 @@ export default function VoronoiPage() {
         ridges: [],
         regions: {}
     });
-    const [myColors, setMyColors] = useState<string[]>(() => {
-        return colorPalettes[Math.floor(Math.random() * colorPalettes.length)];
-    });
+
+    const [liveColors, setLiveColors] = useState<string[]>([]);
     const [showLabels, setShowLabels] = useState<boolean>(false);
-
-    const [isCustomColors, setIsCustomColors] = useState<boolean>(false);
+    const [colorMode, setColorMode] = useState<ColorMode>('random');
     const [customColors, setCustomColors] = useState<string[]>([]);
-    const [customColorsCount, setCustomColorsCount] = useState<number>(1);
-
-    const getNewColors = () => {
-        setMyColors(colorPalettes[Math.floor(Math.random() * colorPalettes.length)]);
-    }
+    const [randomColors, setRandomColors] = useState<string[]>([]);
 
 
 
-    
+    const handleGenerate = () => {
+        setIsLoading(true);
+        fetch('/api/voronoi?points=' + numOfPoints)
+            .then(response => response.json())
+            .then(data => {
+                if (colorMode === 'random') {
+                    const newRandomPalette = getNewRandomColors();
+                    setRandomColors(newRandomPalette);
+                    setLiveColors(newRandomPalette);
+                }
+                setPlotData(data);
+                console.log(data);
+                setIsLoading(false);
+            });
+    };
 
+    const getNewRandomColors = () => {
+        const newRandomPalette = colorPalettes[Math.floor(Math.random() * colorPalettes.length)];
+        return newRandomPalette;
+    };
+
+
+    const updateLiveColors = (shuffle: boolean = false) => {
+        if (colorMode === 'custom') {
+            if (shuffle) {
+                const shuffled = [...customColors].sort(() => Math.random() - 0.5);
+                console.log('Original:', customColors);
+                console.log('Shuffled:', shuffled);
+                setLiveColors(shuffled);
+            } else {
+                setLiveColors(customColors);
+            }
+        } else {
+            setLiveColors(randomColors);
+        }
+    };
+
+
+    // Handle color input changes
+    const handleColorChange = (index: number, newColor: string) => {
+        setCustomColors(prevColors => {
+            const newColors = [...prevColors]; // Create a new array
+            newColors[index] = newColor;       // Update the specific color
+            return newColors;                  // Return the new array
+        });
+    };
+
+    // Add a new color
+    const addColor = () => {
+        const newColor = '#FFFFFF';
+        if (colorMode === 'custom') {
+            const newColors = [...customColors, newColor];
+            setCustomColors(newColors);
+        }
+    };
+
+    // Remove a color
+    const removeColor = (index: number) => {
+        if (colorMode === 'custom') {
+            const newColors = customColors.filter((_, i) => i !== index);
+            setCustomColors(newColors);
+        }
+    };
 
     return (
         <div className="p-8">
@@ -76,8 +133,6 @@ export default function VoronoiPage() {
                             </label>
                         </div>
 
-
-
                         <div className="mt-4">
                             <details className="border-2 border-gray-200 rounded p-2 group bg-white">
                                 <summary className="cursor-pointer flex items-center">
@@ -90,58 +145,54 @@ export default function VoronoiPage() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                     </svg>
                                 </summary>
-                                <div className="flex items-center space-x-2 mt-2">
-                                    <input
-                                        type="checkbox"
-                                        id="customColors"
-                                        checked={isCustomColors}
-                                        onChange={(e) => setIsCustomColors(e.target.checked)}
-                                        className="h-4 w-4 text-blue-600 rounded"
-                                    />
-                                    <label htmlFor="customColors" className="text-sm text-gray-700">
-                                        Custom Colors
-                                    </label>
+                                <div className="mt-2">
+                                    <select
+                                        value={colorMode}
+                                        onChange={(e) => {
+                                            const newMode = e.target.value as ColorMode;
+                                            setColorMode(newMode);
+                                            if (newMode === 'random') {
+                                                // Only update live colors when switching to random mode
+                                                setLiveColors(randomColors);
+                                            } 
+                                            // to update custom colors, select "apply colors"
+                                        }}
+                                        className="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+                                    >
+                                        <option value="random">Random Colors</option>
+                                        <option value="custom">Custom Colors</option>
+                                    </select>
                                 </div>
                                 <div className="mt-3">
                                     <div className="grid grid-cols-5 gap-3">
-                                        {[...Array(customColorsCount)].map((_, index) => (
+                                        {(colorMode === 'custom' ? customColors : randomColors).map((color, index) => (
                                             <div key={index} className="relative">
                                                 <div className="relative">
                                                     <input
                                                         type="color"
-                                                        value={customColors[index] || '#FFFFFF'}
-                                                        onChange={(e) => {
-                                                            const newColors = [...customColors];
-                                                            newColors[index] = e.target.value;
-                                                            setCustomColors(newColors);
-                                                        }}
-                                                        className="w-10 h-10 rounded-md cursor-pointer"
+                                                        disabled={colorMode === 'random'}
+                                                        value={color || '#000000'}
+                                                        onChange={(e) => handleColorChange(index, e.target.value)}
+                                                        className={"w-10 h-10 rounded-md" + (colorMode === 'random' ? '' : ' cursor-pointer')}
                                                     />
-                                                    <button
+                                                    {colorMode === 'custom' && <button
                                                         type="button"
                                                         onClick={(e) => {
                                                             e.stopPropagation();
-                                                            const newColors = [...customColors];
-                                                            newColors.splice(index, 1);
-                                                            setCustomColors(newColors);
-                                                            setCustomColorsCount(prev => Math.max(prev - 1, 1));
+                                                            removeColor(index);
                                                         }}
                                                         className="absolute -top-2 -right-2 opacity-0 hover:opacity-100 transition-opacity duration-200 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-1"
                                                         title="Remove color"
                                                     >
                                                         ×
-                                                    </button>
+                                                    </button>}
                                                 </div>
                                             </div>
                                         ))}
-                                        {customColorsCount < 15 && (
+                                        {liveColors.length < 15 && colorMode === 'custom' && (
                                             <button
                                                 type="button"
-                                                onClick={() => {
-                                                    setCustomColorsCount(prev => Math.min(prev + 1, 15));
-                                                    // Add a default white color for the new color input
-                                                    setCustomColors(prev => [...prev, '#FFFFFF']);
-                                                }}
+                                                onClick={addColor}
                                                 className="w-10 h-10 flex items-center justify-center rounded-md border-2 border-dashed border-gray-300 hover:border-blue-400 hover:bg-blue-50 transition-colors"
                                                 title="Add color"
                                             >
@@ -155,15 +206,23 @@ export default function VoronoiPage() {
                                         <button
                                             type="button"
                                             onClick={() => {
-                                                if (customColors.length > 0 && isCustomColors) {
-                                                    setMyColors(customColors);
-                                                } else {
-                                                    getNewColors();
+                                                console.log(colorMode)
+                                                if (colorMode === 'custom') {
+                                                    updateLiveColors(true);
+                                                } 
+                                                else {
+                                                    setCustomColors(liveColors);
+                                                    setColorMode('custom');  // Switch over to custom
                                                 }
                                             }}
-                                            className="text-sm bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded transition-colors"
+                                            disabled={colorMode === 'random' && randomColors.length === 0}
+                                            className={`text-sm px-3 py-1 rounded transition-colors ${
+                                                colorMode === 'random' && randomColors.length === 0
+                                                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                                                    : 'bg-blue-500 hover:bg-blue-600 text-white'
+                                            }`}
                                         >
-                                            Apply Colors
+                                            {colorMode === 'custom' ? 'Apply Colors' : 'Copy To Custom'}
                                         </button>
                                     </div>
                                 </div>
@@ -171,21 +230,12 @@ export default function VoronoiPage() {
 
                         </div>
                         <button
-                            disabled={!isPointCountValid}
+                            disabled={!isPointCountValid || isLoading}
                             className="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:hover:bg-blue-500 disabled:opacity-50 transition-colors"
-                            onClick={() => {
-                                setIsLoading(true);
-                                fetch('/api/voronoi?points=' + numOfPoints)
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        setPlotData(data);
-                                        console.log(data);
-                                        getNewColors();
-                                        setIsLoading(false);
-                                    });
-                            }}
+                            onClick={handleGenerate}
+                            
                         >
-                            Generate
+                            {isLoading ? 'Generating...' : 'Generate'}
                         </button>
                     </div>
                 </div>
@@ -201,7 +251,7 @@ export default function VoronoiPage() {
                                 vertices={plotData.vertices}
                                 ridges={plotData.ridges}
                                 regions={plotData.regions}
-                                colors={myColors}
+                                colors={liveColors}
                                 showPoints={showLabels}
                             />
                         ) :
