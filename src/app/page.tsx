@@ -4,36 +4,30 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="min-h-screen p-8 max-w-6xl mx-auto">
-      <div className="text-center mb-16">
+      <div className="text-center mb-8">
         <h1 className="text-5xl md:text-7xl font-bold mb-4">Welcome To Jack&apos;s Website</h1>
         <p className="text-xl md:text-2xl text-gray-600">Give him a break, it&apos;s still a work in progress</p>
       </div>
       
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold mb-6 text-left">Who is this man?</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold mb-6 text-center">Who is this man?</h2>
+        {/* <div className="flex justify-center mb-4"> */}
+        <div className="flex justify-center">
           <Card
             title="About Me"
             subtitle="The existential question of self"
             imageSrc="https://cdn.jackbelshe.com/images/home/who-am-i.png"
             alt="Jack Belshe"
             route="/about"
-            aspectRatio="16/9"
-          />
-        
-          <Card
-            title="Jack's Picks"
-            subtitle="Get to know our host better with some book and podcast recs"
-            imageSrc="https://cdn.jackbelshe.com/images/home/my_picks.png"
-            alt="Jack's Picks"
-            route="/jacks-picks"
-            aspectRatio="16/9"
+            aspectRatio="4/3"
+            secondarySrc="https://cdn.jackbelshe.com/images/about/prof_front1.jpg"
+            className="w-full max-w-100"
           />
         </div>
       </div>
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold mb-6 text-left">What has this man done?</h2>
+     
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold mb-6 text-center">What has this man built?</h2>
         <div className="flex justify-center mb-4">
             <Card
               title="Projects"
@@ -46,28 +40,9 @@ export default function Home() {
             />
         </div>
       </div>
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold mb-6 text-left">Yes, yes, but HOW has he done this?</h2>
+       <div className="mb-16">
+        <h2 className="text-3xl font-bold mb-6 text-center">What has this man written?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Link href="/uses" className="bg-gray-50 hover:bg-gray-100 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl p-6 flex items-center justify-center border border-gray-100">
-            <span className="text-lg font-semibold text-gray-800">How</span>
-          </Link>
-          <Link href="/now" className="bg-gray-50 hover:bg-gray-100 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl p-6 flex items-center justify-center border border-gray-100">
-            <span className="text-lg font-semibold text-gray-800">Now</span>
-          </Link>
-        </div>
-      </div>
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold mb-6 text-left">What else you got going on?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card
-            title="Woodwork"
-            subtitle="What I used to do when I lived in a place with a backyard"
-            imageSrc="https://cdn.jackbelshe.com/images/home/woodwork1.jpeg"
-            alt="Woodwork"
-            route="/woodwork"
-            aspectRatio="16/9"
-          />
           <Card
             title="The Great Escape"
             subtitle="This one is my travel blog"
@@ -82,6 +57,38 @@ export default function Home() {
             imageSrc="https://cdn.jackbelshe.com/images/home/techno-blogic1.png"
             alt="Techno-Blogic"
             route="/techno-blogic"
+            aspectRatio="16/9"
+          />
+        </div>
+      </div>
+      {/* <div className="mb-8">
+        <h2 className="text-3xl font-bold mb-6 text-left">Yes, yes, but HOW has he done this?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Link href="/uses" className="bg-gray-50 hover:bg-gray-100 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl p-6 flex items-center justify-center border border-gray-100">
+            <span className="text-lg font-semibold text-gray-800">How</span>
+          </Link>
+          <Link href="/now" className="bg-gray-50 hover:bg-gray-100 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl p-6 flex items-center justify-center border border-gray-100">
+            <span className="text-lg font-semibold text-gray-800">Now</span>
+          </Link>
+        </div>
+      </div> */}
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold mb-6 text-left">What else you got going on?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card
+            title="Woodwork"
+            subtitle="What I used to do when I lived in a place with a backyard"
+            imageSrc="https://cdn.jackbelshe.com/images/home/woodwork1.jpeg"
+            alt="Woodwork"
+            route="/woodwork"
+            aspectRatio="16/9"
+          />
+          <Card
+            title="Jack's Picks"
+            subtitle="Get to know our host better with some book and podcast recs"
+            imageSrc="https://cdn.jackbelshe.com/images/home/my_picks.png"
+            alt="Jack's Picks"
+            route="/jacks-picks"
             aspectRatio="16/9"
           />
         </div>

@@ -1,0 +1,3 @@
+# robots.txt (Preview / Staging)
+User-agent: *
+Disallow: /

@@ -1,0 +1,10 @@
+# robots.txt
+User-agent: *
+Allow/ 
+
+# Disallow private/non-content areas
+Disallow: /api/
+
+
+# Sitemap location
+Sitemap: https://jackbelshe.com/sitemap.xml
